@@ -2,26 +2,40 @@
 
 ![Audit](https://img.shields.io/badge/audit%3A%20PASS-brightgreen) ![License](https://img.shields.io/badge/license-MIT-blue) ![OpenClaw](https://img.shields.io/badge/OpenClaw-skill-orange)
 
-> A skill that implements role-based access control to limit AI agent terminal access based on user-defined permissions
+> Automates role-based access control for AI agent terminal operations with user-defined permissions.
 
-I don't have access to previous context or what was attempted before. To continue effectively, I need to know:
+## Features
 
-1. What task you were working on
-2. Where you left off
-3. What specifically failed or timed out
+- Define role-based permissions for terminal commands
+- Enforce access control via CLI and agent integration
+- Log access violations for auditing
+- Support permission inheritance and custom levels
 
-Could you provide those details or simply restate what you'd like me to help with?
-
-## OpenClaw Marketplace
-
-This skill is available on [ClawHub](https://clawhub.ai) — the OpenClaw skill marketplace.
-Install it in any OpenClaw agent workspace with:
+## Usage
 
 ```bash
-clawhub install rbac-terminal-access
+# Check if a role can execute a command
+./scripts/rbac.sh check <role> <command>
+
+# Manage roles via CLI
+python3 scripts/rbac-cli.py add-role <role_name>
+python3 scripts/rbac-cli.py grant <role_name> <command>
+python3 scripts/rbac-cli.py revoke <role_name> <command>
+python3 scripts/rbac-cli.py list-roles
+python3 scripts/rbac-cli.py check <role_name> <command>
 ```
 
-**Recommended price when commercial:** $79 USD
+## Configuration
+
+- Default permissions loaded from `scripts/permissions.json`
+- CLI allows dynamic role and permission updates
+- Audit log written to STDERR for transparency
+
+## GitHub
+
+Source code: [github.com/NeoSkillFactory/rbac-terminal-access](https://github.com/NeoSkillFactory/rbac-terminal-access)
+
+**Price suggestion:** $79 USD
 
 ## License
 
