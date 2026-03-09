@@ -1,0 +1,24 @@
+{
+  "roles": {
+    "admin": {
+      "description": "Full access to all terminal commands",
+      "permissions": ["*"],
+      "inherits": []
+    },
+    "developer": {
+      "description": "Access to common development commands",
+      "permissions": ["ls", "cat", "grep", "find", "git", "npm", "node", "python3", "make", "echo", "pwd", "cd", "mkdir", "cp", "mv", "touch"],
+      "inherits": ["reader"]
+    },
+    "reader": {
+      "description": "Read-only access to file system",
+      "permissions": ["ls", "cat", "head", "tail", "grep", "find", "wc", "echo", "pwd"],
+      "inherits": []
+    },
+    "restricted": {
+      "description": "Minimal access for sandboxed operations",
+      "permissions": ["echo", "pwd"],
+      "inherits": []
+    }
+  }
+}

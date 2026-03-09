@@ -1,0 +1,11 @@
+{
+  "name": "rbac-terminal-access",
+  "version": "1.0.0",
+  "description": "Automates role-based access control for AI agent terminal operations with user-defined permissions.",
+  "scripts": {
+    "test": "bash tests/rbac_test.sh",
+    "check": "bash scripts/rbac.sh check admin ls"
+  },
+  "keywords": ["rbac", "access-control", "terminal", "permissions", "openclaw"],
+  "license": "MIT"
+}
