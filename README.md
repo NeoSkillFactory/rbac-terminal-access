@@ -35,8 +35,6 @@ python3 scripts/rbac-cli.py check <role_name> <command>
 
 Source code: [github.com/NeoSkillFactory/rbac-terminal-access](https://github.com/NeoSkillFactory/rbac-terminal-access)
 
-**Price suggestion:** $79 USD
-
 ## License
 
 MIT © NeoSkillFactory
